@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta charset="utf-8" />
+        <meta name="language" content="english"> 
+        <meta name="author" content="Nathan Mitchell">
+
+        <title>Rich Links - Stlle Guide</title>
+        <meta name="description" content="Stlye guide for Rich Links.">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <!-- Rich Links Project Compiled sass -->    
+        <link rel="stylesheet"  href="../css/styles.css">
+        
+        <!-- Style Guide Css -->
+        <link rel="stylesheet"  href="../css/style_guide.css">
+        
+    </head>
+    <body>
+        <div id="skiptocontent">
+          <a href="#maincontent">skip to main content</a>
+        </div>
+        <header>
+            <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs_navbar_collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                        <!--<b>Rich</b><span class='brand_space'> </span>Links-->
+                        <a class="navbar-brand" href="/">
+                            <img src='../img/logos/Black%20Logo50.png' alt="Rich Links"> Style
+                        </a>
+                    </div> <!-- .navbar-header -->
+                    
+                    <div class="collapse navbar-collapse" id="bs_navbar_collapse">
+                        <ul class="nav navbar-nav navbar-middle">
+                            <li><a href="#branding">Branding</a></li>
+                            <li><a href="#color">Colors</a></li>
+                            <li><a href="#typography">Typography</a></li>
+                            <li><a href="#components">Components</a></li>
+                            <li><a href="#rich__links_components">Rich Links</a></li>
+                            <li><a href="#optionone">Video Map</a></li>
+                            <li><a href="#optiontwo">Single page CMS</a></li>
+                            <li role="separator" class="divider"></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav_primary"><a href="#!">Download Assets</a></li>
+                        </ul>
+                    </div><!-- #bs_navbar_collapse -->
+                    
+                </div><!-- .container -->
+            </nav>
+            
+            <div class="short_header">
+                <div class="container">
+                    <h1>Style Guide</h1>
+                </div>
+            </div>
+        </header>
+        
+        <main id="maincontent">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-sm-8">
+                    <a class="rl_anchor" id="introduction"></a>
+                    <h3><a href="#introduction" >#</a> Introduction </h3>
+                    
+                    <div class="sg_panel white_bg">
+                        <h4>This style guide is an example of this style guide.</h4>
+                        <p>The contents of this document is a living style guide, which uses the same site style as it is describing. As such the presentation of this document is a faithful demonstration of the contents within. </p> 
+                        
+                        <p>In addition this document contains the information needed for developers to get started on Rich Links, best practices for development and links to documentation of dependencies.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" >
+                <div class="col-xs-12">
+                    <hr>
+                    <a class="rl_anchor" id="technical"></a>
+                    <h3><a href="#technical">#</a> Technical <a  class="btn btn-default btn-xs show_tech" data-show="#technical_documents">Hide</a></h3>
+                
+                </div>
+                
+                <div id="technical_documents" class="sg_expand">
+                    <div class="col-xs-12">
+                        <a class="rl_anchor" id="compiling"></a>
+                        <h4><a href="#compiling" >#</a> Compiling</h4>
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            <h4>Compiling with gulp</h4>
+                            <p>Compiling is only needed to make changes visible. This project does not need to be compiled to view.</p>
+                            Install <a href="https://nodejs.org/en/">node.js</a> &amp; <a href="https://www.npmjs.com/">npm</a><br>
+                            <ul class="list_sansbullet">
+                                <li>Linux: <code>$ sudo apt install nodejs npm</code> OR</li>
+                                <li>Other: <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+                            </ul>
+
+
+                            Install project dependencies <br>
+                            <ul class="list_sansbullet">
+                                <li><code>$ cd [project_path]</code></li>
+                                <li><code>$ npm install</code></li>
+
+                            </ul>
+
+                            Install gulp globally <br> 
+                            <ul class="list_sansbullet">
+                                <li><code>$ npm install gulp-cli -g</code></li>
+                            </ul>
+
+                            Run Gulp <br>
+                            <ul class="list_sansbullet">
+                                <li><code>$ gulp</code></li>
+                            </ul>  
+
+                            Project directory <code>/public/</code> should now contain the updated web files. 
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <b>Not required to view</b>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <hr>
+                    <a class="rl_anchor" id="tech_info"></a>
+                    <h4><a href="#tech_info" >#</a> Technical Information</h4>
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            <h4>Dependencies</h4>
+                            This project uses the following: 
+                            <ul>
+                                <li><a href="https://gulpjs.com/">Gulp</a></li>
+                                <li><a href="http://handlebarsjs.com//">Handlebars</a></li>
+                                <li><a href="https://jquery.com/">jQuery 3</a></li>
+                                <li><a href="http://sass-lang.com/">Sass</a></li>
+                                <li><a href="https://github.com/twbs/bootstrap-sass">Bootstrap for Sass 3 (Modified)</a></li>
+                            </ul>   
+
+                            <p><b>Gulp</b> is the task runner for compiling the project. (See <a href="#compiling">#compiling</a> for usage).</p>
+
+                            <p><b>Handlebars</b> is a template engine used for shared html components.</p>
+
+                            <p><b>jQuery</b> is a javascript convenience library. <a href="http://api.jquery.com/">jQuery Docs</a></p>
+                            
+                            <p><b>Sass</b> is a popular CSS preprocessor. Syntax is very similar to CSS but developers should make them self familiar with it before working on the project. <a href="http://sass-lang.com/">Sass docs</a>.</p>
+
+                            <p><b>Bootstrap</b> is a css framework. This project uses a custom build so some features you are familiar with may not be avaliable. For a full list of compiled components see <code>/resources/sass/_boostrap-custom.scss</code></p>
+
+                            The main bootstrap components included are: 
+                            <ul>
+                                <li><a href="https://getbootstrap.com/docs/3.3/css/#grid">Grid</a></li>
+                                <li><a href="https://getbootstrap.com/docs/3.3/css/#type">Typography</a></li>
+                                <li><a href="https://getbootstrap.com/docs/3.3/components/#navbar">Buttons</a></li>
+                                <li><a href="https://getbootstrap.com/docs/3.3/css/#buttons">Navbar</a></li>
+                                <li><a href="https://getbootstrap.com/docs/3.3/css/#code">Code</a></li>
+                            </ul>
+
+                            <h4>File Structure</h4>
+                            <p>The main project structure is show below.</p>
+<pre>/
+    /resources/ - <i>Pre-compiled files (Sass, HTML partials)</i>
+        /sass/
+        /html/
+    /public/    - <i>Compiled files. (WEB ROOT)</i>
+        /img/
+        /css/
+        /js/
+        /style_guide/
+</pre>
+                            <h4>Performance</h4>
+                            <p>For purposes of assesment, files will not be minified. (With exception of compiled .css)</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-12">
+                        <hr>
+                    <a class="rl_anchor" id="accessibility"></a>
+                    <h4><a href="#accessibility" >#</a> Accessibility</h4>
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            <h4>Responsive Design</h4>
+                            <p><span class="h5"><b>Desktop First Design.</b></span>
+                            Given this website is intended for a technical audience, prioritze desktop views first. Mobile views should still be considered but it is acceptable for compromises to be made on smaller screen sizes.</p>
+
+                            <p>Optimise for <b>1366x768 px</b>. As smaller screen sizes make up ~50% of desktop web users. Website made for smaller screen look _alright_ at higher resolutions but vice versa doesn't work at all.</p>
+
+                            Bootstrap provides the <code>.container</code> class for limiting screen size to 1170px width.<br> Avoid using <code>.container-fluid</code>
+
+                            <h4>Browser Support</h4>
+                            <table class="sg_browser_table">
+                                <tr>
+                                    <th>
+                                        IE / Edge
+                                    </th>
+                                    <th>
+                                        Chrome
+                                    </th>
+                                    <th>
+                                        Firefox
+                                    </th>
+                                    <th>
+                                        Safari
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        9+
+                                    </td>
+                                    <td>
+                                        (yes)
+                                    </td>
+                                    <td>
+                                        (yes)
+                                    </td>
+                                    <td>
+                                        (yes)
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <p>Check <a href="https://caniuse.com">https://caniuse.com</a> for feature compatability. As a rule of thumb aim for 95%+ Global prefixed support.
+                            </p>
+
+                            <h4>Accessibility guidelines</h4>
+                            <ul>
+                                <li>Ensure HTML is valid (With exception to third-party iframes)</li>
+                                <li>
+                                    Use html navigational aids 
+                                    <ul>
+                                        <li><code>&lt;Header&gt;</code></li>
+                                        <li><code>&lt;Aside&gt;</code></li>
+                                        <li><code>&lt;Nav&gt;</code></li>
+                                        <li><code>&lt;Main&gt;</code></li>
+                                        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">etc...</a></code></li>
+                                    </ul>
+                                </li>
+                                <li>Implement ARIA Enhancements (<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">Docs</a>)</li>
+                                <li>Do not misuse <code>&lt;h[1-6]&gt;</code> tags.</li>
+                                <li>Add skip to main content link (See Below)</li>
+                            </ul>
+
+                            Skip to main content HTML snippit: (From W3C)
+    <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>skiptocontent</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span> <span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#200080; font-weight:bold; '>#</span><span style='color:#7d0045; '>maincontent</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>skip to main content<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    </pre>
+
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sg_squish_msg">
+                    <div class="col-xs-12">
+                         <pre><i>Words for nerds:</i> <b>Content Hidden</b > </pre>
+                    </div>                    
+                </div>
+
+            </div>
+            <div class="rl_page_break"></div>
+            
+            <div class="row">
+                <div class="col-sm-8">
+                    <a class="rl_anchor" id="branding"></a>
+                    <h3><a href="#branding" >#</a> Branding <a class="btn btn-default btn-xs show_tech" data-show="#brand_docs">Hide</a></h3>
+
+                </div>
+
+                <div id="brand_docs" class="sg_expand">
+                    
+                
+                    <div class="col-xs-12">
+                        <div class="sg_panel white_bg">
+                            <p>Rich Links should always be written as "Rich Links"</p>
+                            When writing: 
+                            <ul>
+                                <li>Capitalize both words</li>
+                                <li>Include a space</li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <a class="rl_anchor" id="logo"></a>
+                        <h4><a href="#logo" >#</a> Logo</h4>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="white_bg sg_brand_box">
+                                        <img class="img-responsive" src="../img/logos/Black%20Logo100.png" alt="Rich Links">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="sg_brand_bg sg_brand_box">
+                                        <img class="img-responsive" src="../img/logos/White%20Logo100.png" alt="Rich Links">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-xs-5 col-sm-3">
+                                    <div class="white_bg sg_brand_box">
+                                        <img class="img-responsive" src="../img/logos/Black%20Logo75.png" alt="Rich Links">
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 col-sm-3">
+                                    <div class="sg_brand_bg sg_brand_box">
+                                        <img class="img-responsive" src="../img/logos/White%20Logo75.png" alt="Rich Links">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-2">
+                                    <div class="white_bg sg_brand_box">
+                                        <img class="img-responsive" src="../img/logos/Black%20Logo50.png" alt="Rich Links">
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-2">
+                                    <div class="sg_brand_bg sg_brand_box">
+                                        <img class="img-responsive" src="../img/logos/White%20Logo50.png" alt="Rich Links">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Usage:</h4>
+                            <p>Logos file structure is shown below.</p>
+    <pre>/public/img/logos/
+      Black Logo50.png  - 248 x 51 pixels
+      Black Logo75.png  - 372 x 76 pixels
+      Black Logo100.png - 495 x 101 pixels
+
+      White Logo50.png  - 248 x 51 pixels
+      White Logo75.png  - 372 x 76 pixels
+      White Logo100.png - 495 x 101 pixels</pre>
+                            <hr>
+                            <h4>Best Practices: </h4>
+                            <ul>
+                                <li>Use higher than needed DPI for mobile</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg_squish_msg">
+                    <div class="col-xs-12">
+                         <pre><i>Branding:</i> <b>Content Hidden</b > </pre>
+                    </div>                    
+                </div>
+                                
+            </div>
+            
+            <div class="rl_page_break"></div>
+            
+            <div class="row">
+                <div class="col-xs-12">
+                    <a class="rl_anchor" id="color"></a>
+                    <h3><a href="#color" >#</a> Colors <a class="btn btn-default btn-xs show_tech" data-show="#color_docs">Hide</a></h3>
+                </div>
+                
+                <div id="color_docs" class="sg_expand">
+                
+                
+                    <div class="col-sm-8">
+
+                        <div class="sg_panel white_bg">
+                            <div class="sg_color">
+                                <div class="sg_transp_bg">
+                                    <div class="sg_brand_primary"></div>
+                                </div>
+
+                                <div class="sg_color_name">Brand Color</div>
+                                <div>#37a8ec</div>
+                                <div><var>$brand-primary</var></div>
+                            </div>
+
+                            <div class="sg_color">
+                                <div class="sg_transp_bg">
+                                    <div class="sg_text_color"></div>
+                                </div>
+
+                                <div class="sg_color_name">Main Text</div>
+                                <div>#333333</div>
+                                <div><var>$text-color</var></div>
+                            </div>
+
+                            <div class="sg_color">
+                                <div class="sg_transp_bg">
+                                    <div class="sg_light_text"></div>
+                                </div>
+
+                                <div class="sg_color_name">Minor Text</div>
+                                <div>#666666</div>
+                                <div><var>$light-text</var></div>
+                            </div>
+                            <div class="sg_color">
+                                <div class="sg_transp_bg">
+                                    <div class="sg_body_bg"></div>
+                                </div>
+
+                                <div class="sg_color_name">Body BG</div>
+                                <div>#fafafa</div>
+                                <div><var>$body-bg</var></div>
+                            </div>
+                            <div class="sg_color">
+                                <div class="sg_transp_bg">
+                                    <div class="sg_content_bg"></div>
+                                </div>
+
+                                <div class="sg_color_name">Main Bg</div>
+                                <div>#ffffff</div>
+                                <div><var>$content-bg</var></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Usage:</h4>
+                            <ul>
+                                <li>Use Brand Color for links and buttons</li>
+                                <li>Use Minor Text for all non essential infomation</li>
+                            </ul>
+                            <h4>Best Practices:</h4>
+                            <ul>
+                                <li>Use sass variables when possible</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg_squish_msg">
+                    <div class="col-xs-12">
+                         <pre><i>Color:</i> <b>Content Hidden</b > </pre>
+                    </div>                    
+                </div>
+            </div>
+            
+            <div class="rl_page_break"></div>
+            
+            <div class="row">
+                <div class="col-xs-12">
+                    <a class="rl_anchor" id="typography"></a>
+                    <h3><a href="#typography" >#</a> Typography <a class="btn btn-default btn-xs show_tech" data-show="#type_docs">Hide</a></h3>
+                </div>
+                
+                <div id="type_docs" class="sg_expand">
+                
+                
+                    <div class="col-sm-8">
+
+                        <div class="sg_panel white_bg">
+                            <h4><b>Headings:</b></h4>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="h1">H1 Heading</div>
+                                    <div class="h2">H2 Heading</div>
+                                    <div class="h3">H3 Heading</div> 
+                                    <div class="h4">H4 Heading</div>
+                                    <pre>&lt;h1&gt;H1 Heading&lt;/h1&gt;</pre>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="h1"><b>H1 Bold</b></div>
+                                    <div class="h2"><b>H2 Bold</b></div> 
+                                    <div class="h3"><b>H3 Bold</b></div> 
+                                    <div class="h4"><b>H4 Bold</b></div>
+                                    <pre>&lt;h1&gt;&lt;b&gt;H1 Bold&lt;/b&gt;&lt;/h1&gt;</pre>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="h1"><small>H1 Subtitle</small></div>
+                                    <div class="h2"><small>H2 Subtitle</small></div>
+                                    <div class="h3"><small>H3 Subtitle</small></div>
+                                    <div class="h4"><small>H4 Subtitle</small></div>
+                                    <pre>&lt;div class=&quot;h1&quot;&gt;&lt;small&gt;H1 Subtitle&lt;/small&gt;&lt;/div&gt;</pre>
+
+                                </div>
+                            </div>
+                            <h4><b>Text:</b></h4>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra, magna ut pharetra pulvinar, libero tellus iaculis ligula, eu maximus sem velit et diam. </p>
+                                    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras tempor velit tincidunt, interdum risus at, tincidunt est.</p>
+                                </div>
+                            </div>
+                            <h4><b>Links:</b></h4>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p><a href="#!">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. In pharetra, magna ut pharetra pulvinar, libero tellus iaculis ligula, eu maximus sem velit et diam. </p>
+                                </div>
+                            </div>
+                            <h4><b>Emphasis:</b></h4>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p><b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit. <i>In pharetra</i>, magna ut pharetra pulvinar, libero tellus iaculis ligula, eu maximus sem velit et diam. </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Notes:</h4>
+                            <p>Follows default bootstrap 3 typography very closely. See boostrap docs for more information.</p>
+                            <a class="https://getbootstrap.com/docs/3.3/css/#type">https://getbootstrap.com/docs/3.3/css/#type</a>
+
+                            <h4>Best Practices:</h4>
+                            <ul>
+                                <li>Use headings to convey structure</li>
+                                <li>Use strong tags where promote screen reader awareness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg_squish_msg">
+                    <div class="col-xs-12">
+                         <pre><i>Typography:</i> <b>Content Hidden</b > </pre>
+                    </div>                    
+                </div>
+            </div>
+            
+            <div class="rl_page_break"></div>
+            
+            <div class="row">
+                <div class="col-xs-12">
+                    <a class="rl_anchor" id="components"></a>
+                    <h3><a href="#components" >#</a> Components <a class="btn btn-default btn-xs show_tech" data-show="#components_docs">Hide</a></h3>
+                </div>
+                <div id="components_docs" class="sg_expand">
+                
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            This section is for base components.
+                        </div>
+                    </div>
+                    
+
+                    <div class="col-xs-12">
+                        <hr>
+                        <a class="rl_anchor" id="header"></a>
+                        <h4><a href="#header" >#</a> Header</h4>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            <div class="sg_component_container">
+                                    <nav class="navbar navbar-default">
+
+                                            <div class="navbar-header">
+                                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs_navbar_collapse_demo" aria-expanded="false">
+                                                    <span class="sr-only">Toggle navigation</span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                </button>
+
+                                                <a class="navbar-brand" href="/">
+                                                    <img src='../img/logos/Black%20Logo50.png' alt="Rich Links"> 
+                                                </a>
+                                            </div> <!-- .navbar-header -->
+
+                                            <div class="collapse navbar-collapse" id="bs_navbar_collapse_demo">
+                                                <ul class="nav navbar-nav navbar-middle">
+                                                    <li><a href="#!">Link Name</a></li>
+                                                    <li><a href="#!">Another Link</a></li>
+                                                    <li><a href="#!">[...]</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                </ul>
+                                                <ul class="nav navbar-nav navbar-right">
+                                                    <li class="nav_primary"><a href="#!">Right Link</a></li>
+                                                </ul>
+                                            </div><!-- #bs_navbar_collapse_demo -->
+
+                                    </nav>
+
+                                    <div class="short_header">
+                                        <div class="container">
+                                            <h1>[Page Title]</h1>
+                                        </div>
+                                    </div>
+
+                            </div>
+    <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>header</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>nav</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"navbar navbar-default"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"navbar-header"</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>button</span><span style='color:#474796; '> </span><span style='color:#074726; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"button"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"navbar-toggle collapsed"</span><span style='color:#474796; '> </span><span style='color:#074726; '>data</span><span style='color:#474796; '>-toggle</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"collapse"</span><span style='color:#474796; '> </span><span style='color:#074726; '>data</span><span style='color:#474796; '>-</span><span style='color:#074726; '>target</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#bs_navbar_collapse"</span><span style='color:#474796; '> aria-expanded</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"false"</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sr-only"</span><span style='color:#0057a6; '>></span>Toggle navigation<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"icon-bar"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"icon-bar"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"icon-bar"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>button</span><span style='color:#0057a6; '>></span>
+
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"navbar-brand"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"/"</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span><span style='color:#474796; '> </span><span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>'/img/logos/Black Logo50.png'</span><span style='color:#474796; '> </span><span style='color:#074726; '>alt</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"Rich Links"</span><span style='color:#0057a6; '>></span> 
+                <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>nav</span><span style='color:#0057a6; '>></span>
+
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"collapse navbar-collapse"</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"bs_navbar_collapse"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>ul</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"nav navbar-nav navbar-middle"</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>li</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Link Name<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>li</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>li</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Another Link<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>li</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>li</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>[...]<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>li</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>li</span><span style='color:#474796; '> role</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"separator"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"divider"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>li</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>ul</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>ul</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"nav navbar-nav navbar-right"</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>li</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"nav_primary"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Right Link<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>li</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>ul</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>header</span><span style='color:#0057a6; '>></span>
+    </pre>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Notes:</h4>
+                            <p>Uses a styled version Bootstrap 3 Navbar. With some extras. See bootstrap docs for more information.</p>
+                            <a href="https://getbootstrap.com/docs/3.3/components/#navbar">https://getbootstrap.com/docs/3.3/components/#navbar</a>
+                            <h4>Best Practices:</h4>
+                            <ul>
+                                <li>Consider mobile usage and include seperators where appropriate</li>
+                                <li>#TODO setup html partials</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <hr>
+                        <a class="rl_anchor" id="buttons"></a>
+                        <h4><a href="#buttons">#</a> Buttons</h4>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            <div class="sg_component_container">
+                                <div>
+                                    <small>btn-lg</small><br>
+                                    <a class="btn btn-primary btn-lg" href="#!">Primary Button</a>  
+                                    <a class="btn btn-default btn-lg" href="#!">Default Button lg</a>
+                                </div>
+                                <div>
+                                    <small>btn-md</small><br>
+                                    <a class="btn btn-primary" href="#!">Primary Button</a>  
+                                    <a class="btn btn-default" href="#!">Default Button</a>
+                                </div>
+                                <div>
+                                    <small>btn-sm</small><br>
+                                    <a class="btn btn-primary btn-sm" href="#!">Primary Button</a>  
+                                    <a class="btn btn-default btn-sm" href="#!">Default Button</a>
+                                </div>
+                                <div>
+                                    <small>btn-xs</small><br>
+                                    <a class="btn btn-primary btn-xs" href="#!">Primary Button</a>  
+                                    <a class="btn btn-default btn-xs" href="#!">Default Button</a>
+                                </div>
+
+                            </div>
+                            <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>small</span><span style='color:#0057a6; '>></span>btn-lg<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>small</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>br</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"btn btn-primary btn-lg"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Primary Button<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>  
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"btn btn-default btn-lg"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Default Button lg<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>small</span><span style='color:#0057a6; '>></span>btn-md<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>small</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>br</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"btn btn-primary"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Primary Button<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>  
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"btn btn-default"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Default Button<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>small</span><span style='color:#0057a6; '>></span>btn-sm<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>small</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>br</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"btn btn-primary btn-sm"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Primary Button<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>  
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"btn btn-default btn-sm"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Default Button<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>small</span><span style='color:#0057a6; '>></span>btn-xs<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>small</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>br</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"btn btn-primary btn-xs"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Primary Button<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>  
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"btn btn-default btn-xs"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#"</span><span style='color:#0057a6; '>></span>Default Button<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    </pre>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Notes:</h4>
+                            <p>Bootstrap 3 buttons with the following <b>removed</b></p>
+                            <ul>
+                                <li>Extra colors 'info', 'danger' etc</li>
+                                <li>Button Groups</li>
+                            </ul>
+                            <a href="https://getbootstrap.com/docs/3.3/css/#buttons">https://getbootstrap.com/docs/3.3/css/#buttons</a>
+                            <h4>Best Practices:</h4>
+                            <ul>
+                                <li>Best used for presenting options.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg_squish_msg">
+                    <div class="col-xs-12">
+                         <pre><i>Components:</i> <b>Content Hidden</b > </pre>
+                    </div>                    
+                </div>
+            </div>
+                
+            <div class="rl_page_break"></div>                
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="sg_panel white_bg">
+
+                        The section below shows components from my individual assignment. <b>Rich url embedding</b>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="row">
+                
+                <div class="col-xs-12">
+                    <a class="rl_anchor" id="rich__links_components"></a>
+                    <h3><a href="#rich__links_components" >#</a> Rich Links Components <a class="btn btn-default btn-xs show_tech" data-show="#components_rich_docs">Hide</a></h3>
+                </div>
+                <div id="components_rich_docs" class="sg_expand">
+                
+                    <div class="col-xs-12">
+                        <hr>
+                        <a class="rl_anchor" id="compact_preview"></a>
+                        <h4><a href="#compact_preview" >#</a> Website Compact Preview</h4>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            <div class="sg_component_container">
+                              <div class="rl_compact">
+                                    <div class="rl_compact_thumb">
+                                        <a class="rl_external_link" href="https://xkcd.com/1223/" target="_blank">
+                                            <img src="../img/img_cache/xkcd.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="rl_compact_title">
+                                        <a class="rl_external_link" href="https://xkcd.com/1223/" target="_blank">xkcd: Dwarf Fortress</a>
+                                    </div>
+                                    <div class="rl_compact_desc">
+                                        Description not found
+                                    </div>
+                                    <div class="rl_compact_url">
+                                        <a class="rl_external_link" href="http://pbfcomics.com/comics/now-showing/" target="_blank">xkcd.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_compact"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_compact_thumb"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_external_link"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"https://xkcd.com/1223/"</span><span style='color:#474796; '> </span><span style='color:#074726; '>target</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"_blank"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span><span style='color:#474796; '> </span><span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"../img/img_cache/xkcd.jpg"</span><span style='color:#474796; '> </span><span style='color:#074726; '>alt</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_compact_title"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_external_link"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"https://xkcd.com/1223/"</span><span style='color:#474796; '> </span><span style='color:#074726; '>target</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"_blank"</span><span style='color:#0057a6; '>></span>xkcd: Dwarf Fortress<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_compact_desc"</span><span style='color:#0057a6; '>></span>
+        Description not found
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_compact_url"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_external_link"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"http://pbfcomics.com/comics/now-showing/"</span><span style='color:#474796; '> </span><span style='color:#074726; '>target</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"_blank"</span><span style='color:#0057a6; '>></span>xkcd<span style='color:#008c00; '>.</span>com<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+</pre>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Notes:</h4>
+                            <p>This is output by Rich Links. </p>
+                            
+                            <p>This example is scrapping data in lieu of rich data.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-12">
+                        <hr>
+                        <a class="rl_anchor" id="full_preview"></a>
+                        <h4><a href="#full_preview" >#</a> Website Full Preview</h4>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            <div class="sg_component_container">
+                                <div class="rl_full_website">
+                                    <div class="rl_full_content">
+                                        <div class="rl_image">
+                                            <a class="rl_image_link rl_external_link" href="http://pbfcomics.com/comics/now-showing/" target="_blank">
+                                                <img src="http://pbfcomics.com/wp-content/uploads/2016/08/PBF209-Now_Showing.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="rl_full_header">
+                                        <div class="rl_full_title">
+                                            Now Showing
+                                        </div>
+                                        <div class="rl_full_desc">
+                                            The Perry Bible Fellowship
+                                        </div>
+                                        <div class="rl_full_url">
+                                            <a class="rl_external_link" href="http://pbfcomics.com/comics/now-showing/" target="_blank">pbfcomics.com</a>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_full_website"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_full_content"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_image"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_image_link rl_external_link"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"http://pbfcomics.com/comics/now-showing/"</span><span style='color:#474796; '> </span><span style='color:#074726; '>target</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"_blank"</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span><span style='color:#474796; '> </span><span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"http://pbfcomics.com/wp-content/uploads/2016/08/PBF209-Now_Showing.jpg"</span><span style='color:#474796; '> </span><span style='color:#074726; '>alt</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>""</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_full_header"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_full_title"</span><span style='color:#0057a6; '>></span>
+            Now Showing
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_full_desc"</span><span style='color:#0057a6; '>></span>
+            The Perry Bible Fellowship
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_full_url"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"rl_external_link"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"http://pbfcomics.com/comics/now-showing/"</span><span style='color:#474796; '> </span><span style='color:#074726; '>target</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"_blank"</span><span style='color:#0057a6; '>></span>pbfcomics<span style='color:#008c00; '>.</span>com<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span> 
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Notes:</h4>
+                            <p>This is output by Rich Links. </p>
+                            
+                            <p>This example is pulling content for rich meta tags.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <hr>
+                        <a class="rl_anchor" id="chat"></a>
+                        <h4><a href="#chat" >#</a> Chat Box</h4>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            <div class="sg_component_container">
+                                   <div id="chat_demo" class="chat_demo">     
+                                        <div id="chat_body" class="chat_body">
+
+                                        <div class="chat_message_group  chat_message_unconfirmed chat_message_owner"><div class="chat_message_thumb" role="presentation"><div class="chat_message_thumb_circle" style="background-color:rgb(255,152,213)">W</div></div><div class="chat_message_meta"><span class="chat_message_meta_name">Worried tiger</span><span class="chat_message_meta_timestamp">5:54 PM</span></div><div id="81a7ad65-e3cc-44ff-a340-4006f0627b88" class="chat_message chat_message_owner"><div class="chat_message_body">What the hell is this?</div></div></div><div class="chat_message_group undefined"><div class="chat_message_thumb" role="presentation"><div class="chat_message_thumb_circle" style="background-color:rgb(146,248,70)">C</div></div><div class="chat_message_meta"><span class="chat_message_meta_name">Chat Robot</span><span class="chat_message_meta_timestamp">5:54 PM</span></div><div id="8957d8d0-b97b-43ff-9c53-7525e14b9437" class="chat_message undefined"><div class="chat_message_body">BEEP BOOP!</div></div><div id="de5feff1-4978-49db-a1d1-7a72b2cdda25" class="chat_message undefined"><div class="chat_message_body"><a href="http://pbfcomics.com/comics/now-showing/">http://pbfcomics.com/comics/now-showing/</a><div class="rl_full_website">
+                                        
+                                        
+                                        <div class="rl_full_content">
+                                            <div class="rl_image">
+                                                <a class="rl_image_link rl_external_link" href="http://pbfcomics.com/comics/now-showing/" target="_blank">
+                                                    <img src="http://pbfcomics.com/wp-content/uploads/2016/08/PBF209-Now_Showing.jpg" alt="" title="" style="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="rl_full_header">
+                                            <div class="rl_full_title">
+                                                Now Showing
+                                            </div>
+                                            <div class="rl_full_desc">
+                                                The Perry Bible Fellowship
+                                            </div>
+                                            <div class="rl_full_url">
+                                                <a class="rl_external_link" href="http://pbfcomics.com/comics/now-showing/" target="_blank">pbfcomics.com</a>
+                                            </div>
+                                        </div>
+                                        
+                                    </div></div></div></div><div class="chat_message_group  chat_message_unconfirmed chat_message_owner"><div class="chat_message_thumb" role="presentation"><div class="chat_message_thumb_circle" style="background-color:rgb(255,152,213)">W</div></div><div class="chat_message_meta"><span class="chat_message_meta_name">Worried tiger</span><span class="chat_message_meta_timestamp">5:55 PM</span></div><div id="dfa7d2a1-93b5-42f8-8f07-2594612d5536" class="chat_message chat_message_owner"><div class="chat_message_body">Neat</div></div></div></div> <!-- .chat_body -->
+
+                                        <div class="chat_box">
+                                            <form id="chat_form">
+                                                <label for="chat_input" class="sr-only">Message</label>
+                                                <textarea id="chat_input" class="chat_input" rows="1" placeholder="Send a message" aria-describedby="chat_input_desc"></textarea>
+                                                <span id="chat_input_desc" class="sr-only">Write your message here</span>
+                                            </form>
+                                            <a id="name_btn" class="change_name_btn btn" href="#!">Worried tiger</a>
+                                        </div>
+
+                                        <div class="chat_name_selection hide faded">
+                                            <h3>What is your name?</h3>
+                                            <form id="chat_name_form">
+                                                <input id="chat_name_input" type="text" placeholder="Your Name">
+                                                <input type="submit">
+                                            </form>
+                                            <div class="chat_name_error_box">
+                                            </div>
+                                            <button id="chat_name_selection_close" type="button" class="close" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="chat_defocus hide faded"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                            </div>
+                            <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_demo"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_demo sticky"</span><span style='color:#474796; '> </span><span style='color:#074726; '>style</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#7779bb; font-weight:bold; '>top</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#008c00; '>75</span><span style='color:#006600; '>px</span><span style='color:#406080; '>;</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_body"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_body"</span><span style='color:#0057a6; '>></span>
+        
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span> <span style='color:#595979; '>&lt;!-- .chat_body --></span>
+
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_box"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>form</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_form"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>label</span><span style='color:#474796; '> </span><span style='color:#074726; '>for</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_input"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sr-only"</span><span style='color:#0057a6; '>></span>Message<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>label</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>textarea</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_input"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_input"</span><span style='color:#474796; '> </span><span style='color:#074726; '>rows</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"1"</span><span style='color:#474796; '> </span><span style='color:#074726; '>placeholder</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"Send a message"</span><span style='color:#474796; '> aria-describedby</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_input_desc"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>textarea</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_input_desc"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sr-only"</span><span style='color:#0057a6; '>></span>Write your message here<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>form</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"name_btn"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"change_name_btn btn"</span><span style='color:#474796; '> </span><span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"#!"</span><span style='color:#0057a6; '>></span>No Name<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_name_selection hide faded"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>h3</span><span style='color:#0057a6; '>></span>What is your name?<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>h3</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>form</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_name_form"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>input</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_name_input"</span><span style='color:#474796; '> </span><span style='color:#074726; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>'text'</span><span style='color:#474796; '> </span><span style='color:#074726; '>placeholder</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"Your Name"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>input</span><span style='color:#474796; '> </span><span style='color:#074726; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>'submit'</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>form</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_name_error_box"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>button</span><span style='color:#474796; '> </span><span style='color:#074726; '>id</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_name_selection_close"</span><span style='color:#474796; '> </span><span style='color:#074726; '>type</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"button"</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"close"</span><span style='color:#474796; '> aria-</span><span style='color:#074726; '>label</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"Close"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#474796; '> aria-</span><span style='color:#074726; '>hidden</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"true"</span><span style='color:#0057a6; '>></span><span style='color:#074726; '>&amp;#215;</span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>button</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"chat_defocus hide faded"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"clearfix"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span><span style='color:#595979; '>&lt;!-- .chat_demo --></span>
+</pre>
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Notes:</h4>
+                            <p>Non functioning example. Used to demonstrate realtime embed content and url previews.</p>
+                            <p><b>Requires:</b></p>
+                            <ul>
+                                <li>Including <code>/public/js/chat.js</code></li>
+                                <li>Running <code>/resources/python/chat.py</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg_squish_msg">
+                    <div class="col-xs-12">
+                         <pre><i>Real Links Components:</i> <b>Content Hidden</b > </pre>
+                    </div>                    
+                </div>
+                
+                
+            </div>
+            
+            
+            <div class="rl_page_break"></div>
+            
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="sg_panel white_bg">
+                        
+                        The section below shows components from assignment option: <b>Map video browser</b>.
+                    </div>
+                </div>
+            </div>
+             
+
+            <div class="row" >
+                <br>
+                <div class="col-xs-12">
+                    <a class="rl_anchor" id="optionone"></a>
+                    <h3><a href="#optionone">#</a> Components for Map video browser: <a class="btn btn-default btn-xs show_tech" data-show="#option_one_docs">Hide</a></h3>
+                
+                </div>
+                
+                <div id="option_one_docs" class="sg_expand">
+                    <div class="col-xs-12">
+                        <a class="rl_anchor" id="map"></a>
+                        <h4><a href="#option_one_docs" >#</a> Map</h4>
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                                
+                            <div class="sg_component_container">
+                                <div class="sg-map-container">
+                                    <div class="sg-map">
+                                        <img src="img/world-map.png" style="pointer-events: none; position: relative; top: 9px;" alt="World Map">
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="la-tt" style="left: 13%; top: 48%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="ny-tt" style="left: 26.5%; top: 38%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="lo-tt" style="left: 43%; top: 33%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="nz-tt" style="left: 88%; top: 80%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="du-tt" style="left: 57.5%; top: 49%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="si-tt" style="left: 71.5%; top: 64%; width: 2.5%; height: 6%; "></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="hk-tt" style="left: 73%; top: 57%; width: 2.5%; height: 6%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="au-tt" style="left: 79.5%; top: 79%; width: 3.5%; height: 6%; z-index: 1;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="wa-tt" style="left: 75%; width:3.5%; height: 6%; top: 77%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="vi-tt" style="left: 83%; width:3.5%; height: 6%; top: 82%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="br-tt" style="left: 84%; width:3.5%; height: 6%; top: 76%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="ge-tt" style="left: 48%; width:3.5%; height: 6%; top: 41%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="sp-tt" style="left: 43%; width:3.5%; height: 6%; top: 48%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="te-tt" style="left: 19%; width:3.5%; height: 6%; top: 51%;"></div>
+
+                                        <div class="sg_dropper red-dropper" data-tooltip="ci-tt" style="left: 24%; width:3.5%; height: 6%; top: 58%;"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg-map-container"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg-map"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span><span style='color:#474796; '> </span><span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"img/world-map.png"</span><span style='color:#474796; '> </span><span style='color:#074726; '>style</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#7779bb; font-weight:bold; '>pointer-events</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#074726; '>none</span><span style='color:#406080; '>;</span><span style='color:#474796; '> </span><span style='color:#7779bb; font-weight:bold; '>position</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#074726; '>relative</span><span style='color:#406080; '>;</span><span style='color:#474796; '> </span><span style='color:#7779bb; font-weight:bold; '>top</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#008c00; '>9</span><span style='color:#006600; '>px</span><span style='color:#406080; '>;</span><span style='color:#1060b6; '>"</span><span style='color:#474796; '> </span><span style='color:#0057a6; '>/></span>
+
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_dropper red-dropper"</span><span style='color:#474796; '> </span><span style='color:#074726; '>data</span><span style='color:#474796; '>-tooltip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"la-tt"</span><span style='color:#474796; '> </span><span style='color:#074726; '>style</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#7779bb; font-weight:bold; '>left</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#008c00; '>13</span><span style='color:#006600; '>%</span><span style='color:#406080; '>;</span><span style='color:#474796; '> </span><span style='color:#7779bb; font-weight:bold; '>top</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#008c00; '>48</span><span style='color:#006600; '>%</span><span style='color:#406080; '>;</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_dropper red-dropper"</span><span style='color:#474796; '> </span><span style='color:#074726; '>data</span><span style='color:#474796; '>-tooltip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"ny-tt"</span><span style='color:#474796; '> </span><span style='color:#074726; '>style</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#7779bb; font-weight:bold; '>left</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#008c00; '>26.5</span><span style='color:#006600; '>%</span><span style='color:#406080; '>;</span><span style='color:#474796; '> </span><span style='color:#7779bb; font-weight:bold; '>top</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#008c00; '>38</span><span style='color:#006600; '>%</span><span style='color:#406080; '>;</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_dropper red-dropper"</span><span style='color:#474796; '> </span><span style='color:#074726; '>data</span><span style='color:#474796; '>-tooltip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"lo-tt"</span><span style='color:#474796; '> </span><span style='color:#074726; '>style</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#7779bb; font-weight:bold; '>left</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#008c00; '>43</span><span style='color:#006600; '>%</span><span style='color:#406080; '>;</span><span style='color:#474796; '> </span><span style='color:#7779bb; font-weight:bold; '>top</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#008c00; '>33</span><span style='color:#006600; '>%</span><span style='color:#406080; '>;</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_dropper red-dropper"</span><span style='color:#474796; '> </span><span style='color:#074726; '>data</span><span style='color:#474796; '>-tooltip</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"nz-tt"</span><span style='color:#474796; '> </span><span style='color:#074726; '>style</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"</span><span style='color:#7779bb; font-weight:bold; '>left</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#008c00; '>88</span><span style='color:#006600; '>%</span><span style='color:#406080; '>;</span><span style='color:#474796; '> </span><span style='color:#7779bb; font-weight:bold; '>top</span><span style='color:#308080; '>:</span><span style='color:#474796; '> </span><span style='color:#008c00; '>80</span><span style='color:#006600; '>%</span><span style='color:#406080; '>;</span><span style='color:#1060b6; '>"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+</pre>
+
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Notes:</h4> 
+                            <p>Click events trigger video player to change </p>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="col-xs-12">
+                        <hr>
+                        <a class="rl_anchor" id="video_player"></a>
+                        <h4><a href="#option_one_docs" >#</a> Video Player</h4>
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                                
+                            <div class="sg_component_container">
+                                <div class="sg_video_player">
+                                    <div class="sg_video rl_16_9_responsive_iframe">
+                                        <img class="img-responsive" src="img/video_preview.jpg" alt="Vat Cideo">
+                                    </div>
+                                    
+                                    <div class="sg_video_overlay">
+                                        <div class="sg_video_title">Funny Cat Video MUST WATCH!!!!</div>
+                                        <div class="sg_video_center_player">▶</div>
+                                        <div class="sg_video_controls">
+                                            <div class="sg_video_play_button">▶</div>
+                                            <div class="sg_video_time_control"></div>
+                                            <div class="sg_full">↺</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_video_player"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_video rl_16_9_responsive_iframe"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"img-responsive"</span><span style='color:#474796; '> </span><span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"img/video_preview.jpg"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_video_overlay"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_video_title"</span><span style='color:#0057a6; '>></span>Funny Cat Video MUST WATCH!!!!<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_video_center_player"</span><span style='color:#0057a6; '>></span>▶<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_video_controls"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_video_play_button"</span><span style='color:#0057a6; '>></span>▶<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_video_time_control"</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#474796; '> </span><span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"sg_full"</span><span style='color:#0057a6; '>></span>↺<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+</pre>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Notes:</h4> 
+                            <p>Non functioning example </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg_squish_msg">
+                    <div class="col-xs-12">
+                         <pre><i>Option 1:</i> <b>Content Hidden</b > </pre>
+                    </div>                    
+                </div>
+            </div>
+            
+            <div class="rl_page_break"></div>
+            
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="sg_panel white_bg">
+                        
+                        The section below shows components from assignment option: <b>Single page blog CMS</b>.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-12">
+                    <a class="rl_anchor" id="optiontwo"></a>
+                    <h3><a href="#optiontwo" >#</a> Components for Single page blog CMS: <a class="btn btn-default btn-xs show_tech" data-show="#option_two_docs">Hide</a></h3>
+                
+                </div>
+                
+                <div id="option_two_docs" class="sg_expand">
+                    <div class="col-xs-12">
+                        <a class="rl_anchor" id="single_post"></a>
+                        <h4><a href="#optiontwo">#</a> Single Post Compact</h4>
+
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="sg_panel white_bg">
+                            
+                            <div class="sg_component_container">
+                                
+                                <div class="as_post">
+                                    <div class="row">
+
+                                        <div class="col-sm-3 col-md-2 as_post_image_container">
+                                            <div class="as_post_image" style="background-image: url('img/sundae_thumb.jpg')">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9 col-md-10">
+
+                                            <div class="as_post_content">
+                                                <div class="as_post_head">
+                                                    <div class="as_post_title">
+                                                        <h3><a href="#!">Post Name is Usually at Least This Long</a></h3>
+                                                    </div>
+                                                    <div>Posted on 18th Sep, 2017 9:03 PM - By [User Name] <small>Tags: <a href='#'>Danish</a> - <a href='#'>Sugar</a> - <a href='#'>Pudding</a></small></div>
+                                                </div>
+                                                <div class="as_post_text">
+                                                    <p>
+                                                        <span class="lead">Cupcake</span> ipsum dolor sit. Amet danish jelly-o. Dessert jelly liquorice powder. Marshmallow candy canes powder dessert wafer muffin. Wafer brownie halvah danish tiramisu. Marzipan sweet gummies powder ice cream apple pie bonbon muffin. Carrot cake bear claw gingerbread.
+                                                    </p>
+                                                    <p>
+                                                        Caramels donut tart lemon drops. Gingerbread biscuit candy powder. Sugar plum marzipan chupa chups cupcake cheesecake. Tootsie roll gummi bears tart pudding liquorice marshmallow. Bonbon cotton candy bonbon. Cheesecake tiramisu fruitcake chocolate wafer sugar plum marzipan fruitcake tart. Carrot cake tootsie roll gummies donut sweet. Cake caramels jelly beans danish. ... <a href="#!">Read More</a>
+                                                    </p>
+                                                </div>
+
+                                                <a class="btn btn-md btn-primary as_post_btn">View Full Post</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>row</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>col-sm-2 as_post_image_container</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_image</span><span style='color:#800000; '>"</span> <span style='color:#074726; '>style</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#7779bb; font-weight:bold; '>background-image</span><span style='color:#308080; '>:</span><span style='color:#1060b6; '> </span><span style='color:#400000; '>url</span><span style='color:#308080; '>(</span><span style='color:#1060b6; '>'</span><span style='color:#40015a; '>img/sundae_thumb.jpg</span><span style='color:#1060b6; '>'</span><span style='color:#308080; '>)</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+
+            <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>col-sm-10</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_content</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_head</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_title</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+                        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>h3</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span> <span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#200080; font-weight:bold; '>#</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>Post Name is Usually at Least This Long<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>h3</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>Posted on 18th Sep, 2017 9:03 PM - By [User Name]<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_text</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#0057a6; '>></span>
+                        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>span</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>lead</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>Cupcake<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#0057a6; '>></span> [Description]
+                    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>btn btn-md btn-primary as_post_btn</span><span style='color:#800000; '>"</span> <span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#200080; font-weight:bold; '>#</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>View Full Post<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+</pre>
+                            
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <hr>
+                        <a class="rl_anchor" id="single_post_content"></a>
+                        <h4><a href="#optiontwo">#</a> Single Post Content</h4>
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="sg_panel white_bg">
+                            
+                            <div class="sg_component_container">
+                                
+                                <div class="as_post as_post_full">
+                                    <div class="row">
+
+                                        <div class="col-xs-12 as_post_image_container">
+                                            <div class="as_post_image" style="background-image: url('img/sundae_thumb.jpg')">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+
+                                            <div class="as_post_content">
+                                                <div class="as_post_head">
+                                                    <div class="as_post_title">
+                                                        <h3><a href="#!">Post Name is Usually at Least This Long</a></h3>
+                                                    </div>
+                                                    <div>Posted on 18th Sep, 2017 9:03 PM - By [User Name] <small>Tags: <a href='#'>Danish</a> - <a href='#'>Sugar</a> - <a href='#'>Pudding</a></small></div>
+                                                </div>
+                                                <div class="as_post_text">
+                                                    <p>
+                                                        <span class="lead">Cupcake</span> ipsum dolor sit. Amet danish jelly-o. Dessert jelly liquorice powder. Marshmallow candy canes powder dessert wafer muffin. Wafer brownie halvah danish tiramisu. Marzipan sweet gummies powder ice cream apple pie bonbon muffin. Carrot cake bear claw gingerbread.
+                                                    </p>
+                                                    <p>
+                                                        Caramels donut tart lemon drops. Gingerbread biscuit candy powder. Sugar plum marzipan chupa chups cupcake cheesecake. Tootsie roll gummi bears tart pudding liquorice marshmallow. Bonbon cotton candy bonbon. Cheesecake tiramisu fruitcake chocolate wafer sugar plum marzipan fruitcake tart. Carrot cake tootsie roll gummies donut sweet. Cake caramels jelly beans danish. 
+                                                    </p>
+                                                    <p>
+                                                        Donut tart lemon drops. Gingerbread biscuit candy powder. Sugar plum marzipan chupa chups cupcake cheesecake. Tootsie roll gummi bears tart pudding liquorice marshmallow. Bonbon cotton candy bonbon. Cheesecake tiramisu fruitcake chocolate wafer sugar plum marzipan fruitcake tart. Carrot cake tootsie roll gummies donut sweet. Cake caramels jelly beans danish. 
+                                                    </p>
+                                                    <p>
+                                                        [Full post]
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post as_post_full</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>row</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>col-xs-12 as_post_image_container</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_image</span><span style='color:#800000; '>"</span> <span style='color:#074726; '>style</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#7779bb; font-weight:bold; '>background-image</span><span style='color:#308080; '>:</span><span style='color:#1060b6; '> </span><span style='color:#400000; '>url</span><span style='color:#308080; '>(</span><span style='color:#1060b6; '>'</span><span style='color:#40015a; '>img/sundae_thumb.jpg</span><span style='color:#1060b6; '>'</span><span style='color:#308080; '>)</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+
+            <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>col-xs-12</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+
+            <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_content</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_head</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_title</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+                        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>h3</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span> <span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#200080; font-weight:bold; '>#</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>Post Name is Usually at Least This Long<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>h3</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>Posted on 18th Sep, 2017 9:03 PM - By [User Name] <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>small</span><span style='color:#0057a6; '>></span>Tags: <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span> <span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#800000; '>'</span><span style='color:#200080; font-weight:bold; '>#</span><span style='color:#800000; '>'</span><span style='color:#0057a6; '>></span>Danish<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span> - <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span> <span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#800000; '>'</span><span style='color:#200080; font-weight:bold; '>#</span><span style='color:#800000; '>'</span><span style='color:#0057a6; '>></span>Sugar<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span> - <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span> <span style='color:#074726; '>href</span><span style='color:#308080; '>=</span><span style='color:#800000; '>'</span><span style='color:#200080; font-weight:bold; '>#</span><span style='color:#800000; '>'</span><span style='color:#0057a6; '>></span>Pudding<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>small</span><span style='color:#0057a6; '>></span><span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_text</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+                    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#0057a6; '>></span>
+                        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>span</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>lead</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>Cupcake<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>span</span><span style='color:#0057a6; '>></span> [content]
+                    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>p</span><span style='color:#0057a6; '>></span>
+                <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+
+            <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+</pre>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Notes:</h4> 
+                            <p>This is the main content of the post. On mobile it comes before the sidebar. </p>
+                            <p>On desktop there would be a side bar where this note is now. </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-12">
+                        <hr>
+                        <a class="rl_anchor" id="single_post_sidebar"></a>
+                        <h4><a href="#optiontwo">#</a> Single Post Sidebar</h4>
+
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            
+                            <div class="sg_component_container">
+                                    <div class="as_post_author">
+                                        <img class="as_post_author_img" src="img/avatar.jpg" alt="Amanda Avatar" />
+                                        <div class="as_post_author_name"><h4>Amanda Avatar</h4></div>
+                                        <div class="as_post_author_desc">
+                                            Amanda is a danish jelly-o. Dessert jelly liquorice powder. Marshmallow candy canes powder dessert wafer muffin. Wafer brownie halvah danish tiramisu.
+                                        </div>
+                                        <br>
+                                        <a class="btn btn-lg btn-default">See Profile</a>
+                                    </div>
+                            </div>
+                                            
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <pre style='color:#000020;background:#f6f8ff;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_author</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_author_img</span><span style='color:#800000; '>"</span> <span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#40015a; '>img/avatar.jpg</span><span style='color:#800000; '>"</span> <span style='color:#074726; '>alt</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>Amanda Avatar</span><span style='color:#800000; '>"</span> <span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_author_name</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+        <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>h4</span><span style='color:#0057a6; '>></span>Amanda Avatar<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>h4</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>div</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>as_post_author_desc</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>
+        [desc]
+    <span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>br</span> <span style='color:#0057a6; '>/></span>
+    <span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>a</span> <span style='color:#074726; '>class</span><span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>btn btn-lg btn-default</span><span style='color:#800000; '>"</span><span style='color:#0057a6; '>></span>See Profile<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>a</span><span style='color:#0057a6; '>></span>
+<span style='color:#0057a6; '>&lt;/</span><span style='color:#200080; font-weight:bold; '>div</span><span style='color:#0057a6; '>></span>
+</pre>
+         
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="sg_panel white_bg">
+                            <h4>Notes:</h4> 
+                            <p>This is the sidebar for the main content</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sg_squish_msg">
+                    <div class="col-xs-12">
+                         <pre><i>Option 2:</i> <b>Content Hidden</b > </pre>
+                    </div>                    
+                </div>
+
+
+                
+            </div>
+
+            
+            <div class="rl_page_break"></div>
+            <p>Images via <a href="https://unsplash.com">https://unsplash.com</a></p>
+        </div>
+        </main>    
+        
+        <script src="../js/third_party/jquery.min.js"></script>
+        <script async src="../js/third_party/bootstrap.min.js"></script>
+        
+        <script>
+            $('.show_tech').on('click', function(){
+                var $this = $(this);
+
+                var target = $this.data('show');
+                var $target = $(target)
+
+                if ($target.length > 0)
+                {
+                    if ($target.hasClass('hide'))
+                    {
+                        $this.html('Hide');
+                        $target.removeClass('hide');
+                        setTimeout(function(){
+                            $target.removeClass('sg_squish').addClass('sg_expand');
+                        },5);
+                    }
+                    else
+                    {
+                        $this.html('Show');
+                        $target.removeClass('sg_expand').addClass('sg_squish');
+                        setTimeout(function(){
+                            $target.addClass('hide');
+                        },1000);
+                    }
+                }
+            });
+
+        </script>
+    </body>
+</html>

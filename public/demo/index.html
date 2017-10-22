@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta charset="utf-8" />
+        <meta name="language" content="english"> 
+        <meta name="author" content="Nathan Mitchell">
+        
+        <title>Rich Links - Demo</title>
+
+        <meta name="description" content="Rich Links is an open source utility for intelligent URL embedding.  Input user generated links and output embedded content, website previews or webpage information.">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+        <!-- Compiled from sass -->    
+        <link rel="stylesheet"  href="/css/styles.css">
+    </head>
+    <body>
+        <div id="skiptocontent">
+          <a href="#maincontent">skip to main content</a>
+        </div>
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs_navbar_collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                        <a class="navbar-brand" href="/">
+                            <img src='/img/logos/Black Logo50.png' alt="Rich Links">
+                        </a>
+                    </div> <!-- .navbar-header -->
+                    
+                    <div class="collapse navbar-collapse" id="bs_navbar_collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">About</a></li>
+                            <li class="active"><a href="/demo">Demo <span class="sr-only">(current)</span></a></li>
+                            <li role="separator" class="divider"></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class=""><a href="#">Documentation</a></li>
+                            <li class="nav_primary"><a href="#">Download</a></li>
+                        </ul>
+                    </div><!-- #bs_navbar_collapse -->
+                    
+                </div><!-- .container -->
+            </nav>
+            
+            <div class="short_header">
+                <div class="container">
+                    <h1>Demo &amp; Examples</h1>
+                </div>
+            </div>
+        </header>
+        <main id="maincontent">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6" id="demo_LHS">
+                    <div id="chat_demo" class="chat_demo sticky" style="top: 75px;">
+                        
+                        <div id="chat_body" class="chat_body">
+
+                        </div> <!-- .chat_body -->
+
+                        <div class="chat_box">
+                            <form id="chat_form">
+                                <label for="chat_input" class="sr-only">Message</label>
+                                <textarea id="chat_input" class="chat_input" rows="1" placeholder="Send a message" aria-describedby="chat_input_desc"></textarea>
+                                <span id="chat_input_desc" class="sr-only">Write your message here</span>
+                            </form>
+                            <a id="name_btn" class="change_name_btn btn" href="#!">No Name</a>
+                        </div>
+
+                        <div class="chat_name_selection hide faded">
+                            <h3>What is your name?</h3>
+                            <form id="chat_name_form">
+                                <input id="chat_name_input" type='text' placeholder="Your Name">
+                                <input type='submit'>
+                            </form>
+                            <div class="chat_name_error_box">
+                            </div>
+                            <button id="chat_name_selection_close" type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&#215;</span>
+                            </button>
+                        </div>
+                        <div class="chat_defocus hide faded"></div>
+                        <div class="clearfix"></div>
+                    </div><!-- .chat_demo -->
+                    
+                </div> <!-- .col-sm-6 -->
+                
+                <div class="col-sm-6 " id="demo_RHS">
+                    <ul class="nav nav-tabs nav_inline_flush demo_tabs_top">
+                        <li role="presentation" class="active"><a href="#" data-tab-id="demo_video_tab">Videos</a></li>
+                        <li role="presentation"><a href="#" data-tab-id="demo_image_tab">Images</a></li>
+                        <li role="presentation"><a href="#" data-tab-id="demo_webpage_tab">Webpages</a></li>
+                        <li role="presentation"><a href="#" data-tab-id="demo_url_tab">Short Urls</a></li>
+                        <li role="presentation"><a href="#" data-tab-id="demo_direct_tab">Direct Links</a></li>
+                    </ul>
+                    
+                    <div id="demo_video_tab" class="white_bg chat_demo_desc">
+                        <div class="rl_demo_header ">
+                            <h4>Youtube Example</h4>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="rl_demo_container style_full ">
+                            
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre>Check this video out <a href="https://youtu.be/SYRlTISvjww" target="_blank">https://youtu.be/SYRlTISvjww</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <ul class="nav nav-tabs demo_tabs_inner">
+                                    <li role="presentation" class="active"><a href="#" data-tab-id="youtube_content">View</a></li>
+                                    <li role="presentation"><a href="#" data-tab-id="youtube_raw">Raw Response</a></li>
+                                </ul>
+                                <div id="youtube_raw" class="demo_tabs_raw hide">
+                                    <pre style='color:#000020;background:#f6f8ff;'><span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>DOMAIN</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>youtube.com</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>IMG</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>http://nathan-desktop/temp/media/images/1508673521_d4c9cf810f99f06c.jpg</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>path</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>/var/www/html/temp/media/images/1508673521_d4c9cf810f99f06c.jpg</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>img</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>PROTOCOL</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>https://</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>RESPONSIVE_PADDING</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>padding-bottom: 56.25%;</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                        <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                        <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>URL</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>https://www.youtube.com/watch?v=SYRlTISvjww&amp;feature=youtu.be</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>attr</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>_oembed</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>http://www.youtube.com/oembed</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>_template</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>embed/responsive_html</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>author_name</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>SUSE</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>author_url</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>https://www.youtube.com/channel/UCHTfqIzPKz4f_dri36lAQGA</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>description</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#074726; '>&amp;</span><span style='color:#074726; '>quot</span><span style='color:#074726; '>;</span><span style='color:#1060b6; '>Uptime Funk</span><span style='color:#074726; '>&amp;</span><span style='color:#074726; '>quot</span><span style='color:#074726; '>;</span><span style='color:#1060b6; '> music video (parody of </span><span style='color:#800000; '>'</span>
+                            <span style='color:#800000; '>'</span><span style='color:#1060b6; '>Uptown Funk) from SUSECon 2015 in Amsterdam. </span><span style='color:#800000; '>'</span>
+                            <span style='color:#800000; '>'</span><span style='color:#1060b6; '>Lyrics: This bit Uncontrolled A bad bug, Make my </span><span style='color:#800000; '>'</span>
+                            <span style='color:#800000; '>'</span><span style='color:#1060b6; '>system fold This bug, in t...</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                 <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                 <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>desc</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>height</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>270</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>html</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>&lt;iframe width="480" height="270" </span><span style='color:#800000; '>'</span>
+                     <span style='color:#800000; '>'</span><span style='color:#1060b6; '>src="https://www.youtube.com/embed/SYRlTISvjww?feature=oembed" </span><span style='color:#800000; '>'</span>
+                     <span style='color:#800000; '>'</span><span style='color:#1060b6; '>frameborder="0" allowfullscreen>&lt;/iframe></span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+          <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+          <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>provider_name</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>YouTube</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>provider_url</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>https://www.youtube.com/</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                  <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                  <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>thumbnail_height</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>360</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>thumbnail_url</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>http://nathan-desktop/temp/media/images/1508673521_d4c9cf810f99f06c.jpg</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                   <span style='color:#800000; '>'</span><span style='color:#1060b6; '>path</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>/var/www/html/temp/media/images/1508673521_d4c9cf810f99f06c.jpg</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                   <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                   <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>img</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>thumbnail_width</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>480</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>title</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>Uptime Funk - (Uptown Funk parody)</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+           <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+           <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>video</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>version</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>1.0</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>width</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>480</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#406080; '>}</span>
+</pre>
+                                </div>
+                                <div id="youtube_content" class="demo_tabs_view">
+                                    <div class="rl_preview rl_html rl_youtube_com rl_html_video">
+                                        <div class="rl_responsive_iframe_container" style="padding-bottom: 56.25%;">
+                                            <iframe width="480" height="270" data-slow-src="https://www.youtube.com/embed/SYRlTISvjww?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div><!-- .rl_container -->
+                        
+                        <div class="rl_demo_header ">
+                            <h4>Vimeo Example</h4>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="rl_demo_container style_full">
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre>Saw this on Vimeo <a href="https://vimeo.com/169599296" target="_blank">https://vimeo.com/169599296</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <ul class="nav nav-tabs demo_tabs_inner">
+                                    <li role="presentation" class="active"><a href="#" data-tab-id="vimeo_content">View</a></li>
+                                    <li role="presentation"><a href="#" data-tab-id="vimeo_raw">Raw Response</a></li>
+                                </ul>
+                                <div id="vimeo_raw" class="demo_tabs_raw hide">
+                                    <pre>
+                                        Nothing Here yet!
+                                    </pre>
+                                </div>
+                                <div id="vimeo_content" class="demo_tabs_view">
+                                    <div class="rl_preview rl_html rl_vimeo_com rl_html_video">
+                                        <div class="rl_responsive_iframe_container" style="padding-bottom: 56.25%;">
+                                            <iframe data-slow-src="https://player.vimeo.com/video/169599296" width="640" height="360" frameborder="0" title="2016 AICP Sponsor Reel - Dir Cut" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div><!-- .rl_container -->
+                        
+                        <div class="rl_demo_header ">
+                            <h4>Twitch.tv Example</h4>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="rl_demo_container style_full">
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre>I saw this live <a href="https://clips.twitch.tv/YummySmilingWrenchDansGame" target="_blank">https://clips.twitch.tv/YummySmilingWrenchDansGame</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <div class="demo_tabs_view">
+                                    <div class="rl_preview rl_html rl_clips_twitch_tv rl_html_video">
+                                        <div class="rl_responsive_iframe_container" style="padding-bottom: 56.2%;">
+                                            <iframe data-slow-src="https://clips.twitch.tv/embed?clip=YummySmilingWrenchDansGame&amp;autoplay=false" width="500" height="281" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .rl_container -->
+
+                        <div class="rl_demo_header ">
+                            <h4>Twitter Example</h4>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="rl_demo_container style_full">
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre>spoiler warning <a href="https://twitter.com/starwars/status/917570021018046465" target="_blank">https://twitter.com/starwars/status/917570021018046465</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <div class="demo_tabs_view">
+                                    <div class="rl_preview rl_html rl_twitter_com rl_html_rich">
+                                        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Watch the new trailer for Star Wars: <a href="https://twitter.com/hashtag/TheLastJedi?src=hash&amp;ref_src=twsrc%5Etfw">#TheLastJedi</a> and see it in theaters December 15. Get your tickets now: <a href="https://t.co/6vE5KUSv1f">https://t.co/6vE5KUSv1f</a> <a href="https://t.co/wcKvn0jjPO">pic.twitter.com/wcKvn0jjPO</a></p>&mdash; Star Wars (@starwars) <a href="https://twitter.com/starwars/status/917570021018046465?ref_src=twsrc%5Etfw">October 10, 2017</a></blockquote>
+                                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .rl_container -->
+                    </div><!-- #demo_video_tab -->
+                    
+                    <div id="demo_image_tab" class="white_bg chat_demo_desc hide">
+                        <div class="rl_demo_header ">
+                            <h4>Imgur Example</h4>
+                        </div>
+                        <div class="rl_demo_container style_full ">
+                            
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre>From imgur, <a href="https://imgur.com/tA7bMSi" target="_blank">https://imgur.com/tA7bMSi</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <ul class="nav nav-tabs demo_tabs_inner">
+                                    <li role="presentation" class="active"><a href="#" data-tab-id="imgur_content">View</a></li>
+                                    <li role="presentation"><a href="#" data-tab-id="imgur_raw">Raw Response</a></li>
+                                </ul>
+                                <div id="imgur_raw" class="demo_tabs_raw hide">
+                                    <pre style='color:#000020;background:#f6f8ff;'><span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>DOMAIN</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>imgur.com</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>IMG</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>http://nathan-desktop/temp/media/images/1508673268_c00ef9c38014582e.jpg</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>path</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>/var/www/html/temp/media/images/1508673268_c00ef9c38014582e.jpg</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>img</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>PROTOCOL</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>https://</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>URL</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>https://imgur.com/tA7bMSi</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>attr</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>_template</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>image/full</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>description</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>Imgur: The most awesome images on the Internet.</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                 <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                 <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>desc</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>title</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>Moe</span><span style='color:#074726; '>&amp;#x27;</span><span style='color:#1060b6; '>s Tavern, artist unknown</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+           <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+           <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#406080; '>}</span>
+</pre>
+                                </div>
+                                <div id="imgur_content" class="demo_tabs_view">
+                                    <div class="rl_full_image rl_preview">
+                                        <div class="rl_image">
+                                            <a class="rl_image_link rl_external_link" href="https://imgur.com/tA7bMSi" target="_blank">
+                                                <img data-lazy-src="https://i.imgur.com/tA7bMSi.jpg" alt="imgur.com IMAGE" title="" style="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div><!-- .rl_container -->
+
+                       <div class="rl_demo_header ">
+                            <h4>Instagram Example</h4>
+                        </div>
+                        <div class="rl_demo_container style_full ">
+                            
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre>From Insta, <a href="https://www.instagram.com/p/BUZFcBugWcd/?taken-by=jonathan.washburn" target="_blank">https://www.instagram.com/p/BUZFcBugWcd/?taken-by=jonathan.washburn</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <div  class="demo_tabs_view">
+                                    <div class="rl_full_image rl_full_image_plus_desc rl_preview">
+                                        <div class="rl_full_title">
+                                            Instagram post by jonathan washburn • May 22, 2017 at 10:52am UTC
+                                        </div>
+                                        <div class="rl_full_desc">
+                                        </div>
+                                        <div class="rl_image">
+                                            <a class="rl_image_link rl_external_link" href="https://www.instagram.com/p/BUZFcBugWcd/?taken-by=jonathan.washburn" target="_blank">
+                                                <img data-lazy-src="https://scontent-syd2-1.cdninstagram.com/t51.2885-15/e35/18579857_1668978006449857_237083375855206400_n.jpg" alt="instagram.com IMAGE" title="" style="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div><!-- .rl_container -->
+                        
+                        <div class="rl_demo_header ">
+                            <h4>Wikipedia Example</h4>
+                        </div>
+                        <div class="rl_demo_container style_full ">
+                            
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre>Wikipedia, damn. <a href="https://commons.wikimedia.org/wiki/File:ISS-32_American_EVA_b3_Aki_Hoshide.jpg" target="_blank">https://commons.wikimedia.org/wiki/File:ISS-32_American_EVA_b3_Aki_Hoshide.jpg</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <div id="wikipedia_content" class="demo_tabs_view">
+                                    <div class="rl_image">
+                                        <a class="rl_image_link rl_external_link" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/ISS-32_American_EVA_b3_Aki_Hoshide.jpg/800px-ISS-32_American_EVA_b3_Aki_Hoshide.jpg" target="_blank">
+                                            <img data-lazy-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/ISS-32_American_EVA_b3_Aki_Hoshide.jpg/800px-ISS-32_American_EVA_b3_Aki_Hoshide.jpg" alt="File:ISS-32 American EVA b3 Aki Hoshide.jpg" src=/img/pix.png>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                       </div><!-- .rl_container -->
+                        
+                    </div><!-- #demo_image_tab -->
+                    <div id="demo_webpage_tab" class="white_bg chat_demo_desc hide">
+                        
+                        <div class="rl_demo_header ">
+                            <h4>Website with open graph tags <br><small>News sites usually have really good open graph information</small></h4>
+                        </div>
+                        <div class="rl_demo_container style_full ">
+                            
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre>In the news <a href="https://www.cbsnews.com/news/jfk-assassination-trump-to-allow-release-of-classified-documents/" target="_blank">https://www.cbsnews.com/news/jfk-assassination-trump-to-allow-release-of-classified-documents/</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <ul class="nav nav-tabs demo_tabs_inner">
+                                    <li role="presentation" class="active"><a href="#" data-tab-id="news_content">View</a></li>
+                                    <li role="presentation"><a href="#" data-tab-id="news_raw">Raw Response</a></li>
+                                </ul>
+                                <div id="news_raw" class="demo_tabs_raw hide">
+                                    <pre style='color:#000020;background:#f6f8ff;'><span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>DOMAIN</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>cbsnews.com</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>IMG</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>http://nathan-desktop/temp/media/images/1508672852_e4e08ede9af9afd2.jpg</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>path</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>/var/www/html/temp/media/images/1508672852_e4e08ede9af9afd2.jpg</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>img</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>PROTOCOL</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>https://</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>URL</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>https://www.cbsnews.com/news/jfk-assassination-trump-to-allow-release-of-classified-documents/</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+         <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>attr</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>description</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>Unexpected move means trove of never-before-seen </span><span style='color:#800000; '>'</span>
+                            <span style='color:#800000; '>'</span><span style='color:#1060b6; '>documents are set to be released by Oct. 26</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                 <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+                 <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>desc</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#308080; '>,</span>
+ <span style='color:#800000; '>'</span><span style='color:#1060b6; '>title</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#406080; '>{</span><span style='color:#800000; '>'</span><span style='color:#1060b6; '>content</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>JFK assassination: Trump to allow release of classified </span><span style='color:#800000; '>'</span>
+                      <span style='color:#800000; '>'</span><span style='color:#1060b6; '>documents</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+           <span style='color:#800000; '>'</span><span style='color:#1060b6; '>strength</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>high</span><span style='color:#800000; '>'</span><span style='color:#308080; '>,</span>
+           <span style='color:#800000; '>'</span><span style='color:#1060b6; '>type</span><span style='color:#800000; '>'</span><span style='color:#406080; '>:</span> <span style='color:#800000; '>'</span><span style='color:#1060b6; '>text</span><span style='color:#800000; '>'</span><span style='color:#406080; '>}</span><span style='color:#406080; '>}</span>
+</pre>
+                                </div>
+                                <div id="news_content" class="demo_tabs_view">
+                                    <div class="rl_compact rl_preview">
+                                        <div class="rl_compact_thumb rl_image">
+                                            <a class="rl_external_link" href="https://www.cbsnews.com/news/jfk-assassination-trump-to-allow-release-of-classified-documents/" target="_blank">
+                                                <img src="http://comp2772.nm.tc/temp/media/thumbs/thumbnail_1508685900_18fef5616537f73b_100x100.jpg" alt="JFK assassination: Trump to allow release of classified documents Thumbnail">
+                                            </a>
+                                        </div>
+                                        <div class="rl_compact_title">
+                                            <a class="rl_external_link" href="https://www.cbsnews.com/news/jfk-assassination-trump-to-allow-release-of-classified-documents/" target="_blank">JFK assassination: Trump to allow release of classified documents</a>
+                                        </div>
+                                        <div class="rl_compact_desc">
+                                            Unexpected move means trove of never-before-seen documents are set to be released by Oct. 26
+                                        </div>
+                                        <div class="rl_compact_url">
+                                            <a class="rl_external_link" href="https://www.cbsnews.com/news/jfk-assassination-trump-to-allow-release-of-classified-documents/" target="_blank">cbsnews.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div><!-- .rl_container -->
+
+                       <div class="rl_demo_container style_full ">
+                            
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre><a href="https://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor" target="_blank">https://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <div class="demo_tabs_view">
+                                    <div class="rl_compact rl_preview">
+                                        <div class="rl_compact_thumb rl_image">
+                                            <a class="rl_external_link" href="https://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor" target="_blank">
+                                                <img src="http://comp2772.nm.tc/temp/media/thumbs/thumbnail_1508686824_05f6877e96e8a408_100x100.jpg" alt="How to exit the Vim editor? Thumbnail">
+                                            </a>
+                                        </div>
+                                        <div class="rl_compact_title">
+                                            <a class="rl_external_link" href="https://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor" target="_blank">How to exit the Vim editor?</a>
+                                        </div>
+                                        <div class="rl_compact_desc">
+                                            I'm stuck and cannot escape. It says:"type :quit&amp;lt;Enter&amp;gt; to quit VIM"
+                    But when I type that it simply appears in the object body.
+                                        </div>
+                                        <div class="rl_compact_url">
+                                            <a class="rl_external_link" href="https://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor" target="_blank">stackoverflow.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div><!-- .rl_container -->
+                        
+                        
+                        <div class="rl_demo_header ">
+                            <h4>Website without without open graph tags <br><small>Pretty hard to find, but back to good old fashion web scraping</small></h4>
+                        </div>
+                        <div class="rl_demo_container style_full ">
+                            
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre>From xkcd. <a href="https://xkcd.com/1223/" target="_blank">https://xkcd.com/1223/</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <div id="xkcd_content" class="demo_tabs_view">
+                                    <div class="rl_compact rl_preview">
+                                        <div class="rl_compact_thumb rl_image">
+                                            <a class="rl_external_link" href="https://xkcd.com/1223/" target="_blank">
+                                                <img src="http://comp2772.nm.tc/temp/media/thumbs/thumbnail_1508686718_ad48b16c32a71edd_100x100.jpg" alt="xkcd: Dwarf Fortress Thumbnail" title="" style="">
+                                            </a>
+                                        </div>
+                                        <div class="rl_compact_title">
+                                            <a class="rl_external_link" href="https://xkcd.com/1223/" target="_blank">xkcd: Dwarf Fortress</a>
+                                        </div>
+                                        <div class="rl_compact_desc">
+                                            xkcd: Dwarf Fortress    Archive  What If?  Blag  Store  About       A webcomic of romance,  sarcasm, math, and language.   xkcd updates every Monday, Wednesday, and Friday.      Dwarf Fortress
+                                        </div>
+                                        <div class="rl_compact_url">
+                                            <a class="rl_external_link" href="https://xkcd.com/1223/" target="_blank">xkcd.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div><!-- .rl_container -->
+                    
+                    </div>
+                    <div id="demo_url_tab" class="white_bg chat_demo_desc hide">
+                        <div class="rl_demo_header ">
+                            <h4>Short url resolving <br><small>Hidden urls are a thing of the past</small></h4>
+                        </div>
+                        <div class="rl_demo_container style_full ">
+                            
+                            <div class="rl_demo_message">
+                                <b>User Input:</b>
+                                <pre>I wonder where this tiny url goes??? <a href="https://tinyurl.com/ycafk5ls" target="_blank">https://tinyurl.com/ycafk5ls</a></pre>
+                            </div>
+                            <hr>
+                            <div class="rl_demo_content">
+                                <div class="rl_preview rl_html rl_youtube_com rl_html_video">
+                                    <div class="rl_responsive_iframe_container" style="padding-bottom: 56.25%;">
+                                        <iframe width="480" height="270" data-slow-src="https://www.youtube.com/embed/dQw4w9WgXcQ?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
+                                    </div>
+                               </div>
+                            </div>
+                       </div><!-- .rl_container -->
+                    </div>
+                    <div id="demo_direct_tab" class="white_bg chat_demo_desc hide">
+                            <div class="rl_demo_header ">
+                                <h4>Direct link resolving<br><small>Don't expect your users to have to click on stuff</small></h4>
+                            </div>
+                            <div class="rl_demo_container style_full ">
+                                
+                                <div class="rl_demo_message">
+                                    <b>User Input:</b>
+                                    <pre><a href="https://i.redd.it/62sscjb5sdtz.jpg" target="_blank">https://i.redd.it/62sscjb5sdtz.jpg</a></pre>
+                                </div>
+                                <hr>
+                                <div class="rl_full_image rl_preview">
+                                    <div class="rl_image">
+                                        <a class="rl_image_link rl_external_link" href="https://i.redd.it/62sscjb5sdtz.jpg" target="_blank">
+                                            <img data-lazy-src="https://i.redd.it/62sscjb5sdtz.jpg" alt="i.redd.it IMAGE" title="" style="">
+                                        </a>
+                                    </div>
+                                </div>
+                           </div><!-- .rl_container -->
+                    </div>
+                    
+                    <!--<div>
+                            Wish list:
+                            Streamable
+                            Twitter
+                            Facebook ?? (difficult because of their frontend api)
+                            
+                        </div>-->
+
+                        
+                </div> <!-- .col-sm-6 -->
+            </div><!-- .row -->
+            
+            
+            
+            
+        </div><!-- .container -->
+        </main>
+        
+        <!-- THIRD PARTY DEPENDENCIES -->
+        <script src="/js/third_party/jquery.min.js"></script>
+        <script async src="/js/third_party/bootstrap.min.js"></script>
+        
+        <script src="/js/third_party/socket.io.js"></script>
+        <script async src="/js/chat.js"></script>
+        
+        <script src="js/third_party/stickyfill.min.js"></script>
+        <script>
+            if ($(window).width() > 768)
+                $('.sticky').Stickyfill();
+        </script>
+        
+        <script>
+            $('.demo_tabs_top a').on('click', function(){
+                var $this = $(this);
+                return change_tab($this, true);
+                
+            });
+            
+            $('.demo_tabs_inner a').on('click', function(){
+                var $this = $(this);
+                return change_tab($this, false);
+            });
+            
+            function change_tab($this, top_tabs)
+            {
+                var $old_link = $this.parent().siblings('.active');
+                
+                var old_tab_id = $old_link.children('a').data('tab-id');
+                var new_tab_id = $this.data('tab-id');
+                
+                $old_link.removeClass('active');
+                $this.parent().addClass('active');
+                
+                var $old_tab = $('#' + old_tab_id);
+                var $new_tab = $('#' + new_tab_id);
+                    
+                $old_tab.addClass('hide');
+                $new_tab.removeClass('hide');
+                
+                if (top_tabs)
+                {
+                    load_content($new_tab);
+                    unload_content($old_tab);
+                    
+                    match_height();
+                }
+                
+                return false;
+            }
+            
+            function load_content($parent)
+            {
+                if ($parent.has('iframe[slow-src]'))
+                {
+                    load_iframes($parent);
+                }
+                if ($parent.has('img[lazy-src]'))
+                {
+                    load_images($parent);
+                }
+            }
+            
+            function unload_content($parent)
+            {
+                if ($parent.has('iframe[slow-src]'))
+                {
+                    unload_iframes($parent);
+                }
+            }
+            
+            function load_images($parent)
+            {
+                var $images = $parent.find('img[data-lazy-src]');
+                
+                $images.each(function() {
+                    var $this = $(this);
+                    var src = $this.data('lazy-src');
+                    $this.attr('src', src);
+
+                    /*$this.on('load', function(){
+                        var $this = $(this);
+                        if ($this.attr('src') != null)
+                            $this.parents('.rl_image').removeClass('rl_faded');
+                    });*/
+
+                });
+            }
+            
+            function load_iframes($parent){
+                var $iframes = $parent.find('iframe[data-slow-src]');
+                
+                
+                $iframes.each(function() {
+                    var $this = $(this);
+                    var src = $this.data('slow-src');
+                    $this.attr('src', src);
+
+                    $this.on('load', function(){
+                        var $this = $(this);
+                        if ($this.attr('src') != null)
+                            $this.parents('.rl_iframe').removeClass('rl_faded');
+                    });
+
+                });
+            }
+
+            function unload_iframes($parent){
+                var $iframes = $parent.find('iframe[data-slow-src]');
+                $iframes.each(function() {
+                    var $this = $(this);
+                    
+                    $this.attr('src', null);
+                    $this.parents('.rl_iframe').addClass('rl_faded')                        
+                });
+            }
+            
+            $(load_iframes($('#demo_video_tab')));
+            
+            function match_height()
+            {
+                if ($(window).width() > 768)
+                    $('#demo_LHS').css('height', $('#demo_RHS').height() + 'px');  
+            }
+            
+            match_height();
+               
+        </script>
+        
+    </body>
+
+</html>

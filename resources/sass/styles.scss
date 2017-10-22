@@ -1,0 +1,221 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+//custom version to cut down modules
+@import 'bootstrap-custom';
+
+// Import Chat style
+@import "chat";
+
+// Import Rich Links style
+@import "rich_links";
+
+
+
+
+/*
+==================================
+1. Navbar & Header Banner
+==================================
+*/
+
+/* W3C */
+#skiptocontent {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}
+
+.navbar-brand
+{
+    padding: 11px 15px;
+}
+.navbar-brand img
+{
+    max-height: 26px;
+}
+.brand_space
+{
+    font-size: 10%;
+}
+
+.navbar-default
+{
+    border: none;
+}
+.navbar-default  .navbar-brand
+{
+    background-color: white;
+    position: relative;
+    z-index: $zindex-navbar+1;
+    
+    &:before
+    {
+        content:"";
+        position: absolute;
+        height: 100%;
+        width: 5000%;
+        background-color: #fff;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+.nav_primary
+{
+    font-weight: bold;    
+}
+/* 
+    ==============================
+    1.1 Header Banner
+    ==============================
+    */
+    .short_header
+    {
+        margin-top: 50px;
+        background: white;
+        color: #333;
+        margin-bottom: 30px;
+        padding: 0;
+        border-bottom: 1px solid #ccc;
+    }
+    .short_header h1
+    {
+        font-weight: normal;
+        margin: 0;
+        font-size: 25px;
+        line-height: 60px;
+        color: #000;
+    }
+
+/* 
+==================================
+2. Content Containers
+==================================
+*/
+
+.white_bg 
+{
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* 
+==================================
+3. Page Specific Elements
+==================================
+*/
+
+    /* 
+    ==============================
+    3.1 Chat Demo
+    ==============================
+    */
+    .chat_demo_desc
+    {
+        padding: 15px;        
+        .nav-tabs>li
+        {
+            float: right;        
+            margin-right: 0;
+            margin-left: 5px;
+        }
+    }
+    .nav-tabs > li > a
+    {
+        padding: 5px 10px;
+    }
+
+    .rl_demo_tab
+    {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-bottom-color: #f1f1f1;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: white;
+        position: relative;
+        top: 1px;
+        float: right;
+        color: #333;
+    }
+    .rl_demo_header span
+    {
+        margin: 0;
+        font-size: 15px;
+    }
+    .rl_demo_container
+    {
+        padding: 15px;
+        margin-bottom: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        border-top-right-radius: 0;
+        background-color: white;
+        
+    }
+
+    
+
+/* 
+==================================
+4. Helper Classes
+==================================
+*/
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.sticky:before,
+.sticky:after {
+    content: '';
+    display: table;
+}
+
+/* Pretty page break */
+.rl_page_break
+{
+    margin: 75px 0;
+    height: 1px;
+    
+    &:after
+    {
+        content: "";
+        height: 2px;
+        background-color: #999;
+        border-bottom: 1px solid white;
+        width: 96vw;
+        position: absolute;
+        left: 2vw;
+    }
+}
+
+a.rl_anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
+/* misc */
+
+.h1, h1,
+.h2, h2,
+.h3, h3,
+.h4, h4
+{
+    text-shadow: 0 1px 0 #fff;
+}
+
+
